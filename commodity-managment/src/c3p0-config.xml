@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+<!-- 	默认加载default-config中的内容 -->
+	<default-config>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/test?useSSL=false&amp;serverTimezone=UTC
+		</property>
+		<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+		<property name="user">root</property>
+		<property name="password">root</property>
+		<!-- 初始化的连接数 -->
+		<property name="initialPoolSize">10</property>
+		<!-- 最小的连接数 -->
+		<property name="minPoolSize">5</property>
+		 <!-- 连接池中最大连接数，默认: 15 -->  
+         <property name="maxPoolSize">50</property>
+         <!-- 当连接池中的连接数据不够的时候，一次性向数据库中申请的连接为10个 -->
+		<property name="acquireIncrement">10</property>
+		<!--每180秒检查所有连接池中的空闲连接。Default: 0 -->
+		<property name="idleConnectionTestPeriod">180</property>
+		<!-- 连接超时时间, default: 0。如果是0，表示无限等待 --> 
+		<property name="checkoutTimeout">6000</property>
+	</default-config>
+</c3p0-config>
